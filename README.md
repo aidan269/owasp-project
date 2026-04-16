@@ -6,22 +6,16 @@ Two Claude Code slash commands for auditing AI agent pipelines against the OWASP
 
 ## Repo structure
 
-```mermaid
-graph TD
-    A[tripwire_skill] --> B[commands/]
-    A --> C[skills/]
-
-    B --> D[tripwire.md<br/>/cantinasec:tripwire]
-    B --> E[inject.md<br/>/cantinasec:inject]
-
-    C --> F[tripwire/]
-    C --> G[inject/]
-
-    F --> H[SKILL.md<br/>Full OWASP Top 10 audit]
-    G --> I[SKILL.md<br/>Prompt injection scanner]
-
-    D -.invokes.-> H
-    E -.invokes.-> I
+```
+owasp-project/
+├── commands/
+│   ├── tripwire.md          ← /cantinasec:tripwire command shim
+│   └── inject.md            ← /cantinasec:inject command shim
+└── skills/
+    ├── tripwire/
+    │   └── SKILL.md         ← full OWASP Top 10 audit
+    └── inject/
+        └── SKILL.md         ← prompt injection scanner (ASI01)
 ```
 
 ## Commands
