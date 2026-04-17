@@ -4,7 +4,7 @@ Proposed addition to [cantina.security/resources/security-plugins](https://www.c
 
 Two **Claude Code slash commands** that run inside Claude agents to audit AI agent pipelines against the OWASP Top 10 for Agentic Applications 2026. Drop them into `~/.claude/commands/cantinasec/` and invoke them directly from any Claude Code session — no separate tooling, no config, no API keys.
 
-Claude reads your pipeline files (`crew.py`, `agents.yaml`, `tasks.yaml`, `.json` workflows), reconstructs the topology, and returns findings with copy-pasteable hardened prompts you can drop straight back into your pipeline.
+Works with Claude, CrewAI, n8n, and more. Point it at your project and Claude reads your pipeline files (`crew.py`, `agents.yaml`, `tasks.yaml`, `.json` workflows), reconstructs the topology, and returns findings with copy-pasteable hardened prompts you can drop straight back into your pipeline.
 
 ## Commands
 
