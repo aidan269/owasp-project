@@ -6,6 +6,12 @@ Two **Claude Code slash commands** that run inside Claude agents to audit AI age
 
 Works with Claude, CrewAI, n8n, and more. Point it at your project and Claude reads your pipeline files (`crew.py`, `agents.yaml`, `tasks.yaml`, `.json` workflows), reconstructs the topology, and returns findings with copy-pasteable hardened prompts you can drop straight back into your pipeline.
 
+## What you get
+
+Most agent security issues aren't in the code — they're in how agents trust each other. A topic variable interpolated raw into a goal string. A web search result passed unfiltered to the next agent. A planner that believes whatever an executor tells it.
+
+Tripwire finds those gaps and hands you the fix. For each finding you get a hardened drop-in prompt, written for that specific node, ready to paste straight back into your `agents.yaml` or system prompt. No security background needed.
+
 ## Commands
 
 | Command | What it does |
