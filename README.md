@@ -13,6 +13,39 @@ Claude reads your pipeline files (`crew.py`, `agents.yaml`, `tasks.yaml`, `.json
 | `/cantinasec:tripwire` | Full audit across all 10 OWASP Agentic risk categories. Returns a drop-in hardened prompt for every finding. |
 | `/cantinasec:inject` | Focused prompt injection scan (ASI01). Finds raw interpolation surfaces, unfiltered tool outputs, and cross-agent propagation chains. |
 
+## Install
+
+**1. Make sure Claude Code is installed:**
+```bash
+npm install -g @anthropic-ai/claude-code
+```
+
+**2. Add the commands:**
+```bash
+mkdir -p ~/.claude/commands/cantinasec
+
+curl -sL https://raw.githubusercontent.com/aidan269/owasp-project/main/commands/tripwire.md \
+  -o ~/.claude/commands/cantinasec/tripwire.md
+
+curl -sL https://raw.githubusercontent.com/aidan269/owasp-project/main/commands/inject.md \
+  -o ~/.claude/commands/cantinasec/inject.md
+```
+
+**3. Run from inside any agent project:**
+```bash
+cd your-agent-project
+claude
+```
+Then type:
+```
+/cantinasec:tripwire
+```
+or pass a specific file:
+```
+/cantinasec:tripwire agents.yaml
+/cantinasec:inject crew.py
+```
+
 ## Repo structure
 
 ```
